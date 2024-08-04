@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: rgb(143, 0, 0);
+}
+
+.nav-pills .nav-link.active{
+    background-color: black;
+}
+
+.main_cover{
+    height: 100vh;
+    background-image: url("../pictures/home.png");
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_cover_text{
+    text-align: center;
+    color: white;
+}
+
+.kontakt_cover{
+    background-image: url("../pictures/kontakt.png");
+}
+
+.coverbtn{
+    background-color: black;
+    color: white;
+}
+
+.coverbtn:hover{
+    background-color:rgb(143, 0, 0);
+}
