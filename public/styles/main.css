@@ -4,24 +4,25 @@ body{
 
 .current {
     color: rgb(127, 5, 5) !important;
-}
-
-nav-link{
-    color: black !important;
+    font-weight: bold;
 }
 
 .nav{
     justify-content: space-evenly;
 }
 
-.nav a {
+.nav a, .main_cover_text a {
     display: inline-block;
     position: relative;
     color: black;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-.nav a::after {
+.main_cover_text a{
+    color: white;
+}
+
+.nav a::after, .main_cover_text a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -35,13 +36,13 @@ nav-link{
     transition: transform 0.25s ease-out;
   }
 
-.nav a:hover::after {
+.nav a:hover::after, .main_cover_text a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
 
-.nav a:hover {
-    color: rgb(127, 5, 5);
+.nav a:hover, .main_cover_text a:hover {
+    color: rgb(127, 5, 5) !important;
   }
 
 .main_cover{
