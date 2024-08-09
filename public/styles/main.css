@@ -2,23 +2,53 @@ body{
     margin: 0;
 }
 
-.nav-link {
+.current {
+    color: rgb(127, 5, 5) !important;
+}
+
+nav-link{
+    color: black !important;
+}
+
+.nav{
+    justify-content: space-evenly;
+}
+
+.nav a {
+    display: inline-block;
+    position: relative;
     color: black;
+    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: rgb(143, 0, 0);
-}
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: rgb(127, 5, 5);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 
-.nav-pills .nav-link.active{
-    background-color: black;
-}
+.nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.nav a:hover {
+    color: rgb(127, 5, 5);
+  }
 
 .main_cover{
     height: 100vh;
     background-image: url("../pictures/home.png");
     background-size: cover;
-
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,13 +61,4 @@ body{
 
 .kontakt_cover{
     background-image: url("../pictures/kontakt.png");
-}
-
-.coverbtn{
-    background-color: black;
-    color: white;
-}
-
-.coverbtn:hover{
-    background-color:rgb(143, 0, 0);
 }
